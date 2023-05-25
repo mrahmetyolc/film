@@ -6,18 +6,14 @@ const FilmTablo = document.querySelector("#filmtablo");
 let YeniSatir;
 
 Form.addEventListener("submit", FormaEkleFonksiyonu);
+FilmTablo.addEventListener("click", SatirSilFonksiyonu);
 
-function deneme(e){
-    console.log("test");
-    
-    e.preventDefault();
-}
 function FormaEkleFonksiyonu(a){
-    console.log("submit oldu");
     YeniSatirEklemeFonksiyonu(a);
     FilmAfisEklemeFonksiyonu(a);
     FilmAdiEklemeFonksiyonu(a);
     FilmYonetmeniEklemeFonksiyonu(a);
+    FilmiSilButonFonksiyonu(a);
     a.preventDefault();
 }
 function YeniSatirEklemeFonksiyonu(e){
@@ -30,27 +26,33 @@ function FilmAdiEklemeFonksiyonu(e){
     YeniFilmAdi.textContent = FormFilmAdi.value.trim();
     YeniFilmAdi.id = "sütün1";
     YeniSatir.appendChild(YeniFilmAdi);
-    console.log(YeniFilmAdi);
-    e.preventDefault();
 }
 function FilmYonetmeniEklemeFonksiyonu(e){
     let YeniFilmYonetmeni = document.createElement("td");
     YeniFilmYonetmeni.textContent = FormFilmYonetmen.value.trim();
     YeniFilmYonetmeni.id = "sütün2";
     YeniSatir.appendChild(YeniFilmYonetmeni);
-    console.log(YeniFilmYonetmeni);
-    e.preventDefault();
 }
 function FilmAfisEklemeFonksiyonu(e){
     let YeniFilmAfis = document.createElement("td");
     YeniFilmAfis.textContent = FormFilmAfis.value.trim();
     YeniFilmAfis.id = "sütün3";
     YeniSatir.appendChild(YeniFilmAfis);
-    console.log(YeniFilmAfis);
-    e.preventDefault();
 }
-
-
+function FilmiSilButonFonksiyonu(e){
+    YeniSilButonu = document.createElement("td");
+    YeniSilButonu.innerHTML = "<a href='#'>Sil</a>";
+    YeniSatir.appendChild(YeniSilButonu);
+}
+function SatirSilFonksiyonu(e){
+    if (e.target.textContent === "Sil"){
+        if (e.target.parentElement.parentElement.id === "filmtablo") {
+        }else {
+            e.target.parentElement.parentElement.remove();
+        }
+        e.preventDefault();
+    }
+}
 
 
 
