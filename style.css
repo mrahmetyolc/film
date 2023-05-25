@@ -1,0 +1,48 @@
+.filmekle {
+    width: 60%;
+    margin: 0 20%;
+    height: 800px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+.filmekle h1 {
+    margin-left: 20px;
+}
+.filmekle input {
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 0 10px;
+} 
+.filmekle button {
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+.filmekle table {
+    width: 80%;
+    margin: 0 10%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+.filmekle table td { height: 40px; }
+#sütun1 { width: 40%; }
+#sütun2 { width: 30%; }
+#sütun3 { width: 20%; }
+#sütun4 { width: 10%; }
+
+
+
+
+
+
+
